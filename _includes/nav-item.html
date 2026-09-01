@@ -1,0 +1,12 @@
+{% assign types = include.items | map: "type" | uniq | compact | sort %}
+<div class="nav-item{% if types.size > 1 %} has-sub{% endif %}">
+  <a href="#{{ include.anchor }}" class="nav-toplink">{{ include.label }}{% if types.size > 1 %}<svg class="icon nav-caret-icon" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>{% endif %}</a>
+  {% if types.size > 1 %}
+  <div class="nav-sub">
+    <a href="#{{ include.anchor }}" data-jump="{{ include.anchor }}" data-jump-filter="all">すべて</a>
+    {% for t in types %}
+    <a href="#{{ include.anchor }}" data-jump="{{ include.anchor }}" data-jump-filter="{{ t }}">{{ t }}</a>
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>

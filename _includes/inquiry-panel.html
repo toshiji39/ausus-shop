@@ -1,0 +1,36 @@
+<div class="scrim" id="scrim">
+  <div class="panel" role="dialog" aria-modal="true" aria-labelledby="panelTitle">
+    <div class="panel-head">
+      <div>
+        <h3 id="panelTitle">お問い合わせ・お見積り</h3>
+        <p id="panelSub">対象商品について確認いたします。</p>
+      </div>
+      <button class="panel-close" id="panelClose" aria-label="閉じる">×</button>
+    </div>
+    <form id="inquiryForm" action="{{ site.data.site_meta.inquiry_form_action }}" method="POST" style="display:flex; flex-direction:column; gap:1.1rem;">
+      <div class="field">
+        <label>対象商品・ご相談内容</label>
+        <input type="text" id="fieldItem" name="item" readonly>
+      </div>
+      <div class="field">
+        <label for="fieldQty">希望数量</label>
+        <input type="text" id="fieldQty" name="quantity" placeholder="例：1台">
+      </div>
+      <div class="field">
+        <label for="fieldPlace">設置場所・お届け先（都道府県）</label>
+        <input type="text" id="fieldPlace" name="location" placeholder="例：愛知県〇〇市">
+      </div>
+      <div class="field">
+        <label for="fieldContact">ご連絡先（メールまたは電話）</label>
+        <input type="text" id="fieldContact" name="contact" required placeholder="例：example@example.com">
+      </div>
+      <div class="field">
+        <label for="fieldNote">ご要望・ご質問</label>
+        <textarea id="fieldNote" name="note" placeholder="設置環境や希望納期など、ご自由にご記入ください"></textarea>
+      </div>
+      <button type="submit" class="btn btn-solid btn-block">この内容で送信する</button>
+    </form>
+  </div>
+</div>
+
+<div class="toast" id="toast"><span class="status-dot"></span><span id="toastText"></span></div>

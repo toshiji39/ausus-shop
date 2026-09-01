@@ -1,0 +1,19 @@
+<div class="notice-bar"><span class="dot"></span><strong>準備中</strong> — 決済リンク・お問い合わせ先・会社情報は未設定です。設定するまで購入・送信はできません</div>
+
+<header class="site">
+  <div class="nav-wrap">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <img class="logo logo-light" src="{{ '/assets/logo/logo-color.png' | relative_url }}" alt="ausus">
+      <img class="logo logo-dark" src="{{ '/assets/logo/logo-white.png' | relative_url }}" alt="ausus">
+      <span class="tagline">Used Plant &amp; Machinery</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">MENU</button>
+    <nav class="primary" id="primaryNav">
+      {% include nav-item.html items=site.komono label="即納パーツ" anchor="komono" %}
+      {% include nav-item.html items=site.omono label="現物商談品" anchor="omono" %}
+      <div class="nav-item"><a href="#jisaku" class="nav-toplink">自作品</a></div>
+      <div class="nav-item"><a href="#koji" class="nav-toplink">工事のご相談</a></div>
+      <div class="nav-item"><a href="{{ site.data.site_meta.blog_url }}" class="nav-toplink" target="_blank" rel="noopener">お役立ちブログ</a></div>
+    </nav>
+  </div>
+</header>

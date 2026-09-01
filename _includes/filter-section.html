@@ -1,0 +1,15 @@
+{% assign items = include.items | sort: "order" %}
+{% assign types = items | map: "type" | uniq | compact | sort %}
+{% if types.size > 1 %}
+<div class="filter-bar" data-group="{{ include.group_id }}" role="group" aria-label="種類で絞り込み">
+  <button class="filter-pill is-active" data-filter="all">すべて</button>
+  {% for t in types %}
+  <button class="filter-pill" data-filter="{{ t }}">{{ t }}</button>
+  {% endfor %}
+</div>
+{% endif %}
+<div class="grid" data-filterable="{{ include.group_id }}">
+  {% for item in items %}
+    {% include card.html item=item %}
+  {% endfor %}
+</div>

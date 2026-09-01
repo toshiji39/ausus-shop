@@ -1,0 +1,51 @@
+title: ausus 中古設備・工事相談
+description: >-
+  プラント設備工事会社aususが、現場で発生した中古設備・未使用の余剰資材・自社製品を
+  直接販売するサイト。工事のご相談もこちらから承ります。
+baseurl: "/ausus-shop"
+url: "https://toshiji39.github.io"
+lang: ja
+timezone: Asia/Tokyo
+
+collections:
+  komono:
+    output: false
+  omono:
+    output: false
+  jisaku:
+    output: false
+
+defaults:
+  - scope:
+      path: ""
+      type: "komono"
+    values:
+      category: komono
+      state_label: "中古"
+      state_class: "tag-used"
+      cta_type: buy
+  - scope:
+      path: ""
+      type: "omono"
+    values:
+      category: omono
+      state_label: "中古"
+      state_class: "tag-used"
+      cta_type: inquiry
+  - scope:
+      path: ""
+      type: "jisaku"
+    values:
+      category: jisaku
+      state_label: "自社製・新品"
+      state_class: "tag-new"
+      cta_type: buy
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

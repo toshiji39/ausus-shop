@@ -1,0 +1,16 @@
+# サイト全体の設定。ここを書き換えるだけで反映される項目をまとめてある。
+
+# お問い合わせ・見積りフォームの送信先。
+# Formspree（https://formspree.io）等でアカウントを作り、発行されたフォームIDに置き換える。
+# 例: https://formspree.io/f/xxxxabcd
+inquiry_form_action: "https://formspree.io/f/meaqezly"
+
+# 特定商取引法に基づく表記・古物商許可番号は確定後にここへ記入する
+tokushoho_status: "準備中"
+kobutsu_license_status: "取得後に表示"
+
+company_desc: "プラント設備工事会社。機械設計・据付、配管工事、設備の新設/修繕を手がける。"
+
+# 関連サイトへのリンク。公開URLが決まったら差し替える
+corporate_site_url: "https://ausus.co.jp"
+blog_url: "https://toshiji39.github.io/ausus-plant-blog/"  # 公開後は https://blog.ausus.co.jp/ 等に差し替え予定

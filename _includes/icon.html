@@ -1,0 +1,28 @@
+{% case include.name %}
+{% when 'angle' %}
+<svg class="icon" viewBox="0 0 24 24"><path d="M4 20V4h4M4 20h16"/><path d="M8 4v6h6"/></svg>
+{% when 'jig' %}
+<svg class="icon" viewBox="0 0 24 24"><path d="M14.7 6.3 17.7 9.3M4 20l1.5-5L15.5 5a2.1 2.1 0 0 1 3 3L8.5 18.5 4 20Z"/></svg>
+{% when 'compressor' %}
+<svg class="icon" viewBox="0 0 24 24"><rect x="4" y="7" width="12" height="11" rx="1"/><path d="M8 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M16 11h4M16 15h4"/></svg>
+{% when 'gearbox' %}
+<svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 3v2.4M12 18.6V21M21 12h-2.4M5.4 12H3M18 6l-1.7 1.7M7.7 16.3 6 18M18 18l-1.7-1.7M7.7 7.7 6 6"/></svg>
+{% when 'pipe-small' %}
+<svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="3"/></svg>
+{% when 'pipe-large' %}
+<svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/></svg>
+{% when 'bracket' %}
+<svg class="icon" viewBox="0 0 24 24"><path d="M4 12h16M8 6v12M16 6v12"/></svg>
+{% when 'deck' %}
+<svg class="icon" viewBox="0 0 24 24"><path d="M4 20V10l8-6 8 6v10M4 20h16M9 20v-6h6v6"/></svg>
+{% when 'plant' %}
+<svg class="icon" viewBox="0 0 24 24"><rect x="3" y="9" width="18" height="10" rx="1"/><path d="M7 9V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3"/></svg>
+{% when 'repair' %}
+<svg class="icon" viewBox="0 0 24 24"><path d="M14.7 6.3 17.7 9.3M4 20l1.5-5L15.5 5a2.1 2.1 0 0 1 3 3L8.5 18.5 4 20Z"/></svg>
+{% when 'duct' %}
+<svg class="icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="6" rx="1"/><rect x="3" y="13" width="18" height="6" rx="1"/></svg>
+{% when 'pipe' %}
+<svg class="icon" viewBox="0 0 24 24"><path d="M4 8h6a2 2 0 0 1 2 2v0a2 2 0 0 0 2 2h6M4 16h4"/></svg>
+{% else %}
+<svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/></svg>
+{% endcase %}

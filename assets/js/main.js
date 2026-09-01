@@ -100,7 +100,7 @@
     panelSub.textContent = general ? 'ご相談内容について確認いたします。' : '対象商品について、現物確認・お見積りのご相談を承ります。';
     scrim.classList.add('open');
     document.body.style.overflow = 'hidden';
-    setTimeout(function(){ document.getElementById('fieldQty').focus(); }, 200);
+    setTimeout(function(){ document.getElementById('fieldPlace').focus(); }, 200);
   }
   function closePanel(){
     scrim.classList.remove('open');

@@ -1,18 +1,17 @@
 ---
 layout: default
-title: ausus 中古設備・工事相談
+title: ausus 中古設備販売
 ---
 
 <section class="hero">
   <div class="inner">
     <div>
-      <div class="eyebrow">Ausus / 中古設備 &amp; 工事相談</div>
+      <div class="eyebrow">Ausus / 中古設備</div>
       <h1 class="jp-head">現場で役目を終えた設備を、<br>次の現場へつなぐ。</h1>
-      <p class="lead">配管工事・機械据付・設備修繕を手がけるaususが、現場で発生した中古設備と未使用の余剰資材を直接販売します。小さな部材はその場でご購入、大型設備は現物を確認しながらお見積り。工事のご相談もこの窓口から承ります。</p>
+      <p class="lead">配管工事・機械据付・設備修繕を手がけるaususが、現場で発生した中古設備と未使用の余剰資材を直接販売します。小さな部材はその場でご購入、大型設備は現物を確認しながらお見積りします。</p>
       <div class="hero-ctas">
         <a class="btn btn-solid" href="#komono">即納パーツを見る</a>
         <a class="btn btn-outline" href="#omono">現物商談品を見る</a>
-        <a class="btn btn-ghost" href="#koji">工事の相談をする</a>
       </div>
     </div>
     <div class="plate hero-plate">
@@ -21,7 +20,6 @@ title: ausus 中古設備・工事相談
       <div class="row"><span>即納パーツ（アングル・治具・パイプ等）</span><span class="mono">中古/未使用 · 即購入</span></div>
       <div class="row"><span>現物商談品（コンプレッサー・減速機等）</span><span class="mono">中古 · 見積り</span></div>
       <div class="row"><span>自社製品</span><span class="mono">新品 · 即購入</span></div>
-      <div class="row"><span>デッキ・階段・配管工事等</span><span class="mono">工事相談</span></div>
     </div>
   </div>
 </section>
@@ -67,27 +65,5 @@ title: ausus 中古設備・工事相談
         {% include card.html item=item %}
       {% endfor %}
     </div>
-  </div>
-</section>
-
-<section id="koji" class="band">
-  <div class="inner">
-    <div class="section-head">
-      <div>
-        <div class="eyebrow">Construction Inquiry</div>
-        <h2 class="jp-head" style="color:var(--band-ink)">工事のご相談</h2>
-        <p class="section-desc">こちらは「商品」ではなく、ausus本業の工事案件のご相談窓口です。</p>
-      </div>
-    </div>
-    <div class="service-grid">
-      {% for s in site.data.services %}
-      <div class="service-item">
-        {% include icon.html name=s.icon %}
-        <h3>{{ s.name }}</h3>
-        <p>{{ s.desc }}</p>
-      </div>
-      {% endfor %}
-    </div>
-    <button class="btn btn-solid js-inquiry" data-item="工事のご相談（内容未指定）" data-general="1">工事について相談する</button>
   </div>
 </section>

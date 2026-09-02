@@ -54,6 +54,13 @@ svg.icon{width:1.4em; height:1.4em; stroke:currentColor; stroke-width:1.5; fill:
 .notice-bar .dot{width:.5em; height:.5em; border-radius:50%; background:var(--accent); flex:none;}
 .notice-bar strong{color:var(--band-ink); font-weight:700;}
 
+.shipping-notice-bar{
+  display:flex; align-items:center; justify-content:center; gap:.5em;
+  background:var(--accent); color:var(--accent-ink); padding:.5em 1rem; text-align:center;
+  font-family:"JetBrains Mono",monospace; font-size:.7rem; letter-spacing:.03em;
+}
+.shipping-notice-bar .dot{width:.5em; height:.5em; border-radius:50%; background:var(--accent-ink); flex:none;}
+
 /* header */
 header.site{ position:sticky; top:34px; z-index:60; background:color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
 .nav-wrap{ max-width:1180px; margin:0 auto; padding:.85rem 1.5rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; }

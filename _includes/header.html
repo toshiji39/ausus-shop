@@ -1,3 +1,6 @@
+{% if site.data.site_meta.shipping_notice and site.data.site_meta.shipping_notice != "" %}
+<div class="shipping-notice-bar"><span class="dot"></span>{{ site.data.site_meta.shipping_notice }}</div>
+{% endif %}
 <div class="notice-bar"><span class="dot"></span><strong>準備中</strong> — 決済リンク・お問い合わせ先・会社情報は未設定です。設定するまで購入・送信はできません</div>
 
 <header class="site">

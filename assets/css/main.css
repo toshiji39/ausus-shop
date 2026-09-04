@@ -54,12 +54,19 @@ svg.icon{width:1.4em; height:1.4em; stroke:currentColor; stroke-width:1.5; fill:
 .notice-bar .dot{width:.5em; height:.5em; border-radius:50%; background:var(--accent); flex:none;}
 .notice-bar strong{color:var(--band-ink); font-weight:700;}
 
-.shipping-notice-bar{
-  display:flex; align-items:center; justify-content:center; gap:.5em;
-  background:var(--accent); color:var(--accent-ink); padding:.5em 1rem; text-align:center;
-  font-family:"JetBrains Mono",monospace; font-size:.7rem; letter-spacing:.03em;
+.announce-scrim{
+  position:fixed; inset:0; z-index:95; display:flex; align-items:center; justify-content:center;
+  background:rgba(15,17,19,.6); padding:1.2rem;
 }
-.shipping-notice-bar .dot{width:.5em; height:.5em; border-radius:50%; background:var(--accent-ink); flex:none;}
+.announce-box{
+  background:var(--surface); color:var(--ink); border:1px solid var(--line); border-radius:6px;
+  box-shadow:var(--shadow); max-width:22rem; width:100%; padding:2rem 1.8rem 1.8rem; text-align:center;
+  display:flex; flex-direction:column; align-items:center; gap:.9rem;
+}
+.announce-icon{width:2.6em; height:2.6em; color:var(--accent);}
+.announce-box h3{margin:0; font-size:1.1rem;}
+.announce-box p{margin:0; font-size:.92rem; line-height:1.7; color:var(--ink-soft);}
+.announce-box .btn{margin-top:.4rem; min-width:8rem;}
 
 /* header */
 header.site{ position:sticky; top:34px; z-index:60; background:color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }

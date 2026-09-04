@@ -1,4 +1,12 @@
 (function(){
+  var shippingScrim = document.getElementById('shippingScrim');
+  var shippingClose = document.getElementById('shippingClose');
+  if (shippingScrim && shippingClose) {
+    shippingClose.addEventListener('click', function(){ shippingScrim.remove(); });
+    shippingScrim.addEventListener('click', function(e){ if (e.target === shippingScrim) shippingScrim.remove(); });
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && document.body.contains(shippingScrim)) shippingScrim.remove(); });
+  }
+
   var navToggle = document.getElementById('navToggle');
   var primaryNav = document.getElementById('primaryNav');
   navToggle.addEventListener('click', function(){

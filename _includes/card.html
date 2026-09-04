@@ -1,17 +1,29 @@
 {% assign item = include.item %}
+{% assign photo_count = 0 %}
+{% if item.photos %}{% assign photo_count = item.photos.size %}{% endif %}
+{% assign has_pdf = false %}
+{% if item.drawing_pdf and item.drawing_pdf != "" %}{% assign has_pdf = true %}{% endif %}
+{% assign slide_count = photo_count %}
+{% if has_pdf %}{% assign slide_count = slide_count | plus: 1 %}{% endif %}
 <article class="card" data-type="{{ item.type }}">
-  <div class="card-photo{% if item.photos and item.photos.size > 0 %} has-photos{% endif %}">
-    {% if item.photos and item.photos.size > 0 %}
+  <div class="card-photo{% if slide_count > 0 %} has-photos{% endif %}">
+    {% if slide_count > 0 %}
     <div class="photo-scroll">
       {% for p in item.photos %}
       <img src="{{ '/assets/photos/' | append: p | relative_url }}" alt="{{ item.title }}" loading="lazy">
       {% endfor %}
+      {% if has_pdf %}
+      <a class="photo-scroll-pdf" href="{{ '/assets/drawings/' | append: item.drawing_pdf | relative_url }}" download target="_blank" rel="noopener">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/><path d="M9 13h1.5a1.5 1.5 0 0 1 0 3H9v-3zm0 3v2m5-5v5m0-5h1.8a1.2 1.2 0 0 1 0 5H14"/></svg>
+        <span>図面PDF<br><small>タップでダウンロード</small></span>
+      </a>
+      {% endif %}
     </div>
-    {% if item.photos.size > 1 %}
-    <button type="button" class="photo-nav photo-prev" aria-label="前の写真">‹</button>
-    <button type="button" class="photo-nav photo-next" aria-label="次の写真">›</button>
+    {% if slide_count > 1 %}
+    <button type="button" class="photo-nav photo-prev" aria-label="前へ">‹</button>
+    <button type="button" class="photo-nav photo-next" aria-label="次へ">›</button>
     <div class="photo-dots">
-      {% for p in item.photos %}<span class="photo-dot{% if forloop.first %} is-active{% endif %}"></span>{% endfor %}
+      {% for i in (1..slide_count) %}<span class="photo-dot{% if forloop.first %} is-active{% endif %}"></span>{% endfor %}
     </div>
     {% endif %}
     {% if item.photo_is_stock %}<span class="stock-badge">イメージ</span>{% endif %}
@@ -28,12 +40,6 @@
       <li><b>{{ s.label }}</b> {{ s.value }}</li>
       {% endfor %}
     </ul>
-    {% if item.drawing_pdf and item.drawing_pdf != "" %}
-    <a class="pdf-link" href="{{ '/assets/drawings/' | append: item.drawing_pdf | relative_url }}" download target="_blank" rel="noopener">
-      <svg class="icon" viewBox="0 0 24 24" style="width:1.1em;height:1.1em;"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/><path d="M9 13h1.5a1.5 1.5 0 0 1 0 3H9v-3zm0 3v2m5-5v5m0-5h1.8a1.2 1.2 0 0 1 0 5H14"/></svg>
-      図面PDFをダウンロード
-    </a>
-    {% endif %}
     <div class="price-row">
       <span class="price">&yen;{{ item.price }}<small> {{ item.price_note }}</small></span>
     </div>

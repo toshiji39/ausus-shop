@@ -197,9 +197,16 @@ section{padding:4.5rem 1.5rem;}
 }
 .photo-scroll{display:flex; width:100%; height:100%; overflow-x:auto; scroll-snap-type:x mandatory; scrollbar-width:thin;}
 .photo-scroll img{flex:0 0 100%; width:100%; height:100%; object-fit:cover; scroll-snap-align:start;}
-.pdf-link{display:inline-flex; align-items:center; gap:.4em; font-family:"JetBrains Mono",monospace; font-size:.76rem; color:var(--status); text-decoration:none; width:fit-content;}
-.pdf-link:hover{text-decoration:underline;}
-.pdf-link:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+.photo-scroll-pdf{
+  flex:0 0 100%; width:100%; height:100%; scroll-snap-align:start;
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:.6em;
+  background:var(--surface-alt); color:var(--status); text-decoration:none; text-align:center;
+}
+.photo-scroll-pdf svg.icon{width:2.6em; height:2.6em;}
+.photo-scroll-pdf span{font-family:"JetBrains Mono",monospace; font-size:.82rem; line-height:1.5;}
+.photo-scroll-pdf small{color:var(--ink-soft); font-size:.72rem;}
+.photo-scroll-pdf:hover{background:color-mix(in srgb, var(--surface-alt) 80%, var(--status) 20%);}
+.photo-scroll-pdf:focus-visible{outline:2px solid var(--accent); outline-offset:-2px;}
 .tag{ display:inline-flex; align-items:center; font-family:"JetBrains Mono",monospace; font-size:.68rem; letter-spacing:.06em; padding:.28em .6em; border-radius:2px; text-transform:uppercase; }
 .tag-used{background:var(--surface-alt); color:var(--ink-soft);}
 .tag-unused{background:var(--status-bg); color:var(--status);}

@@ -13,9 +13,9 @@
       <img src="{{ '/assets/photos/' | append: p | relative_url }}" alt="{{ item.title }}" loading="lazy">
       {% endfor %}
       {% if has_pdf %}
-      <a class="photo-scroll-pdf" href="{{ '/assets/drawings/' | append: item.drawing_pdf | relative_url }}" download target="_blank" rel="noopener">
+      <a class="photo-scroll-pdf" href="{{ '/assets/drawings/' | append: item.drawing_pdf | relative_url }}" target="_blank" rel="noopener">
         <svg class="icon" viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z"/><path d="M15 2v5h5"/><path d="M9 13h1.5a1.5 1.5 0 0 1 0 3H9v-3zm0 3v2m5-5v5m0-5h1.8a1.2 1.2 0 0 1 0 5H14"/></svg>
-        <span>図面PDF<br><small>タップでダウンロード</small></span>
+        <span>図面PDF<br><small>タップで表示</small></span>
       </a>
       {% endif %}
     </div>

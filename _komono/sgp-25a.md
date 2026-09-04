@@ -15,6 +15,7 @@ specs:
   - label: "由来"
     value: "施工現場の余剰資材"
 order: 30
+drawing_pdf: "sgp-25a-drawing.pdf"
 photos:
   - "pipe-stock.jpg"
   - "pipe-duct-room.jpg"
